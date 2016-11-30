@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/getapi.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <div id="loader-wrapper" ng-hide="GetapiCtrl.dataloading == true">
+    <div id="loader">
+    </div>
+  </div>
+  <span style="visibility:hidden;" id="autoply" value= {{Ctrl.autoplayval}}></span>
+  <div class="row">
+   <div class="col-sm-12 col-xs-12">
+    <!-- <div><span id="build-alert-text">Build-Alert</span></div> -->
+    <!-- <span id="Build-logo" >
+     <img src="images/Build-AlertArtboard 1 copy 2.png">
+   </span> -->
+   <div class="wrap">
+    <span id="qwini-logo">
+     <img ng-src="images/logo-ba-reverse@medium.png">
+   </span>
+ </div>
+
+ <div class="wrap">
+  <div id="showcase" class="noselect">
+    <div class="card" ng-repeat="index in build_status | orderBy:'status' ">
+      <div ng-if="index.status == 'SUCCESS'" >
+      <div style="background-color:#39BB9D; position:relative; top: -11.5px; height: 21em;">
+        <h5 id="success-text">{{index.name}}</h5>
+        <img src="images/icon-success@medium.png" height="100px" style="position: relative; top: 25px;">
+        <div class="thumbnail">
+          <p class="temp1" style="color: white; font-size:21px; position:relative;top: 36px; font-family: sans-serif;">
+            {{index.status}}
+          </p>
+          <!-- <p id="sucess-text">PUSHED ON</p> -->
+          <p style="color: white; font-size: 11px; position:relative; top: 40px;"> 
+           {{index.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+         </div>
+         </div>
+
+         <div class="thumbnail">
+         <div><p id="success-build">Build-Id: {{index.id}}</p></div>
+         </div>
+       </div>
+
+
+
+
+       <div ng-if="index.status == 'UNSTABLE'" >
+       <div style="background-color:#9d39bb; position:relative; top: -11.5px; height: 21em;">
+        <h5 id="unstay-text">{{index.name}}</h5>
+        <img src="images/icon-unstable@medium.png" style="position: relative; top: 25px;">
+        <div class="thumbnail">
+        <p class="temp1" style="color: white; font-size:21px; position: relative;top: 36px; font-family: sans-serif;">
+            {{index.status}}
+          </p>
+          <!-- {{index.id}} -->
+          <p style="color: white; font-size: 11px; position: relative;top: 40px;"> 
+           {{index.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+         </div>
+         </div>
+
+         <div class="thumbnail">
+         <div id="unst-build"><p>Build-Id: {{index.id}}</p></div>
+         </div>
+       </div>
+
+
+       
+       <div ng-if="index.status == 'FAILURE'">
+        <div style="background-color:#EF5252; position:relative; top: -11.5px; height: 21em;">
+          <h5 id="proj1-name">{{index.name}}</h5>
+          <img src="images/icon-fail@medium.png" style="position: relative; top: 25px;"> 
+          <div class="thumbnail">
+            <p class="temp1"  style="position: relative; color: white; font-size:21px;top: 36px; font-family: sans-serif;">
+              {{index.status}}
+            </p>
+            <!-- <p id="failure-text">FAILURE SINCE</p> -->
+            <p style="color: white; font-size: 11px; position:relative; top: 40px;"> 
+              {{index.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+            </div>
+          </div>
+
+          <div class="thumbnail">
+            <div><p id="fail-color">Build-Id: {{index.id}}</p></div>
+          </div>
+        </div>
+
+   <!--      <div style="border:1px solid black;">
+        <div style="background-color:red;height:200px;">a</div>
+        <div style="background-color:green;height:100px;">s</div>
+         </div> -->
+
+
+        <div ng-if="index.status == '' ">
+        <div style="background-color:#3998bb; position:relative; top: -11.5px; height: 21em;">
+          <h5 id="proj-name">{{index.name}}</h5>
+          <img src="images/icon-notbuilt-medium.png" style="position: relative; top: 25px;">
+          <div class="thumbnail">
+            <p style="color: white;position: relative;top: 36px; font-size:21px; font-family: sans-serif;">
+              {{index.status == '' ? "Not Configured" : index.Status}}
+            </p>
+            <p style="color: white; font-size: 11px; position:relative; top: 40px;"> 
+              {{index.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+
+          </div>
+          </div>
+          <div class="thumbnail">
+            <div><p id="fail-color">Build-Id: {{index.id}}</p></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer style="background-color: #001340; position:fixed; bottom:0px; right: 0em; height: 5em;  width: 109em; ">
+    <p style="position: relative;left: 51em;top: 2em;">
+    <img src="images/logo-qwinix@small.png"></p>
+    <span id="total-footer">
+  <p id="year-text">@2016,</p>  
+  <!-- <a href="www.qwinix.io"> </a>. -->
+  <p id="site-name"><a href="https://www.qwinix.io/"><span style="color: #ffa800;">www.qwinix.io </span></a></p>
+  <p id="foot-reserved">All Rights Reserved</p>
+  </p>
+  </span>
+</footer>
+</div>
+</div>
+</body>
+</html>
+
+
+<script>
+  var delay = 10000;
+  var delay1 = 100000;
+
+  setTimeout(function() {
+    var play = $('#autoply').attr('value')
+    $(function() {
+      var showcase = $("#showcase")
+
+      showcase.Cloud9Carousel( {
+        yOrigin: 42,
+        yRadius: 40,
+        xRadius: 800,
+        autoPlay: play,
+        smooth: true,
+        farScale: 0,
+        // xRadius: 360,
+        itemClass: "card",
+        // buttonLeft: $(".nav.left"),
+        // buttonRight: $(".nav.right"),
+        bringToFront: true,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+      $("#showcase").data("showcase").itemsRotated(5)
+
+      //
+      // Simulate physical button click effect
+      //
+      $('.nav').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+      $(document).keydown( function( e ) {
+        //
+        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        //
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+          $('.nav.left').click()
+          break
+
+          /* right arrow */
+          case 39:
+          $('.nav.right').click()
+        }
+      } )
+    })
+}, delay);
+
+setTimeout(function() {
+
+  window.location.reload();
+},delay1);
+
+
+</script>
+
+
+<!-- <script src="scripts/social.js"></script> -->
+

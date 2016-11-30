@@ -1,0 +1,163 @@
+{
+  "Success": "true",
+  "Message": "Server was pinged",
+  "Build": [
+    {
+      "name": "cityvitality-angular_it_deploy",
+      "id": 220,
+      "status": "SUCCESS",
+      "timestamp": 1463392225117
+    },
+    {
+      "name": "cityvitality-angular_st_deploy",
+      "id": 194,
+      "status": "SUCCESS",
+      "timestamp": 1463392225117
+    },
+    {
+      "name": "cityvitality-angular_uat_deploy",
+      "id": 6,
+      "status": "SUCCESS",
+      "timestamp": 1464160267253
+    },
+    {
+      "name": "cityvitality_it_deploy",
+      "id": 40,
+      "status": "SUCCESS",
+      "timestamp": 1464160267253
+    },
+    {
+      "name": "cityvitality_st_deploy",
+      "id": 19,
+      "status": "SUCCESS",
+      "timestamp": 1464160267253
+    },
+    {
+      "name": "cityvitality_uat_deploy",
+      "id": 4,
+      "status": "SUCCESS",
+      "timestamp": 1464160267253
+    },
+    
+    
+    {
+      "name": "fortrust_st_deploy",
+      "id": 11,
+      "status": "SUCCESS",
+      "timestamp": 1469102412001
+    },
+    {
+      "name": "fortrust_uat_deploy",
+      "id": 3,
+      "status": "SUCCESS",
+      "timestamp": 1469102412001
+    },
+    {
+      "name": "inotary_it_deploy",
+      "id": 75,
+      "status": "SUCCESS",
+      "timestamp": 1469102412001
+    },
+    {
+      "name": "inotary_production_deploy",
+      "id": 15,
+      "status": "SUCCESS",
+      "timestamp": 1469102412001
+    },
+    {
+      "name": "inotary_st_deploy",
+      "id": 96,
+      "status": "",
+      "timestamp": 1469102412001
+    },
+    {
+      "name": "inotary_uat_deploy",
+      "id": 25,
+      "status": "SUCCESS",
+      "timestamp": 1462951239024
+    },
+    {
+      "name": "it-joybox-admin",
+      "id": 41,
+      "status": "SUCCESS",
+      "timestamp": 1462951239024
+    },
+    
+    {
+      "name": "loanlist-api_it_deploy",
+      "id": 134,
+      "status": "SUCCESS",
+      "timestamp": 1469102412001
+    },
+    {
+      "name": "loanlist-api_st_deploy",
+      "id": 177,
+      "status": "SUCCESS",
+      "timestamp": 1462951239024
+    },
+    {
+      "name": "loanlist-api_uat_deploy",
+      "id": 7,
+      "status": "SUCCESS",
+      "timestamp": 1462951239024
+
+    },
+    {
+      "name": "Loanlist_angular_it",
+      "id": 59,
+      "status": "SUCCESS",
+      "timestamp": 1468588677048
+    },
+    {
+      "name": "Loanlist_angular_st",
+      "id": 37,
+      "status": "SUCCESS",
+      "timestamp": 1468588677048
+    },
+    {
+      "name": "Loanlist_angular_test",
+      "id": 60,
+      "status": "SUCCESS",
+      "timestamp": 1468588677048
+    },
+    {
+      "name": "Loanlist_angular_uat",
+      "id": 6,
+      "status": "SUCCESS",
+       "timestamp": 1468588596612
+    },
+    
+    {
+      "name": "Plist_st_deploy",
+      "id": 1,
+      "status": "SUCCESS",
+       "timestamp": 1468588596612
+    },
+  
+    {
+      "name": "rvidi-web-angular-it",
+      "id": 1,
+      "status": "SUCCESS",
+       "timestamp": 1468588596612
+    },
+    
+    {
+      "name": "testing",
+      "id": 2,
+      "status": "SUCCESS",
+       "timestamp": 1468588596612
+    },
+    {
+      "name": "uat-peershape-election",
+      "id": 9,
+      "status": "SUCCESS",
+       "timestamp": 1468588596612
+    },
+    {
+      "name": "uat-peershape-election-ang",
+      "id": 3,
+      "status": "SUCCESS",
+       "timestamp": 1468588596612
+    }
+  ]
+}
